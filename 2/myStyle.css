@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'titleFont';
+    /*a name to be used later*/
+    src: url('title-font.ttf');
+    /*URL to font*/
+}
+
+body {
+    background-color: #c5d8f7;
+}
+
+#title {
+    font-family: titleFont;
+    font-size: 50px;
+    color: #b0f442;
+    display: flex;
+    justify-content: center;
+}
+
+blockquote {
+    font-family: 'Courier New';
+}
+
+#javascriptImage {
+    height: 200px;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.textContainer {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.column {
+    flex: 1;
+}
+
+#name {
+    font-family: titleFont;
+    font-size: 35px;
+    color: brown
+}
