@@ -13,7 +13,6 @@ for (let i = 1; i <= 100; i++) {
 }
 
 let bindingSize = 8;
-let printSymbol;
 let outcome = '';
 for (let i = 0; i < bindingSize; i++) {
 	for (let j = 0; j < bindingSize; j++) {
