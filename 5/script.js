@@ -1,50 +1,42 @@
-
-sayHello();
-function sayHello() {
-    alert('hello');
+//#1
+const getFibonacci = numbers => {
+	let fib1 = 0;
+	let fib2 = 1;
+	let fib3;
+	let fibSeq = '';
+	for (let i = 0; i < numbers; i++) {
+		if (i === 0) fibSeq += '0';
+		else if (i === 1) fibSeq += ', 1';
+		else {
+			fib3 = fib1 + fib2;
+			fib1 = fib2;
+			fib2 = fib3;
+			fibSeq += (`, ${fib3}`);
+		}
+	}
+	return fibSeq;
 }
 
+console.log(getFibonacci(10));
 
-sayGoodbye();
-const sayGoodbye = function() {
- alert('Goodbye!');   
+//#2.1
+const countBs = input => {
+	let count = 0;
+	for(let i = 0; i < input.length; i++){
+		if(input[i] === 'B') count++;
+	}
+	return count;
 }
 
-function min1(x, y) {
-    if (x > y) return y;
-    else return x;
+console.log(countBs("BBC"));
+
+//#2.2
+const countChar = (input, char) => {
+	let count = 0;
+	for(let i = 0; i < input.length; i++){
+		if(input[i] === char) count++;
+	}
+	return count;
 }
 
-const min2 = function (x, y) {
-    if (x > y) return y;
-    else return x;
-}
-
-let min3 = (x, y) =>  x > y ? y : x
-
-
-console.log(min1(10, 5));
-
-console.log(min2(10, 5));
-
-console.log(min3(10, 5));
-
-
-function chicken() {
-    return egg();
-}
-
-function egg() {
-    return chicken();
-}
-console.log(chicken() + " came first.");
-
-
-let isPrime = x => {
-        for(let i = 2; i < x; i++){
-            if(x % i == 0) return false;
-        }
-        return x !== 1;
-}
-
-console.log(isPrime(99));
+console.log(countChar("kakkerlak", "k"));
